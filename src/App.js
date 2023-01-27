@@ -16,6 +16,8 @@ function App() {
       <TodoList todos={todos} />
         <div>Popup1</div>
         <div>Popup2</div>
+        <div>Login1</div>
+        <div>Login2</div>
     </div>
   );
 }
