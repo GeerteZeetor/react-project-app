@@ -15,6 +15,7 @@ function App() {
       <TodoForm addTodo={addTodoHandler} />
       <TodoList todos={todos} />
         <div>Login1</div>
+        <div>Login2</div>
     </div>
   );
 }
