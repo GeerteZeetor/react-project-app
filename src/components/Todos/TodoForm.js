@@ -8,16 +8,15 @@ export default function TodoForm({ addTodo }) {
     setText('');
   };
   return (
-    <form onSubmit={onSubmitHandler}>
-      <input
-        className={styles.input}
-        placeholder="Enter new todo"
-        value={text}
-        onChange={ev => setText(ev.target.value)}
-      />
-      <button className={styles.buttonSubmit} type="submit">
-        Submit
-      </button>
-    </form>
+    <div className={styles.todoFromContainer}>
+      <form onSubmit={onSubmitHandler}>
+        <input
+          placeholder="Enter new todo"
+          value={text}
+          onChange={ev => setText(ev.target.value)}
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   );
 }
