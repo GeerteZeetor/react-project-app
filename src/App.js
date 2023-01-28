@@ -42,7 +42,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="">Todo App</h1>
+      <h1>Todo App</h1>
       <TodoForm todos={todos} addTodo={addTodoHandler} />
       {!!todos.length && (
         <TodosActions
@@ -57,6 +57,12 @@ function App() {
         todos={todos}
         toggleTodo={toggleTodoHandler}
       />
+
+      {!!completedTodosCount && (
+        <h2>{`You have completed ${completedTodosCount} ${
+          completedTodosCount === 1 ? 'todo' : 'todos'
+        }!`}</h2>
+      )}
     </div>
   );
 }
