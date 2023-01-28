@@ -1,12 +1,12 @@
 import styles from './Todo.module.css';
 import { RiTodoFill } from 'react-icons/ri';
 
-export default function Todo({ todo, index, deleteTodo }) {
+export default function Todo({ text, id, deleteTodo }) {
   return (
-    <div className={styles.todo} onDoubleClick={() => deleteTodo(index)}>
+    <div className={styles.todo} onDoubleClick={() => deleteTodo(id)}>
       <h3 className={styles.textTodo}>
         <RiTodoFill className={styles.todoIcon} />
-        {todo}
+        {text}
       </h3>
     </div>
   );

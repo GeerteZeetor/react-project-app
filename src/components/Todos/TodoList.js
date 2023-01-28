@@ -5,8 +5,8 @@ export default function TodoList({ todos, deleteTodo }) {
   return (
     <div className={styles.todoListContainer}>
       {!todos.length && <h2>Todo list is empty</h2>}
-      {todos.map((todo, index) => (
-        <Todo index={index} deleteTodo={deleteTodo} todo={todo} key={index} />
+      {todos.map(({ text, id }) => (
+        <Todo id={id} deleteTodo={deleteTodo} text={text} key={id} />
       ))}
     </div>
   );
