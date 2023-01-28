@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import styles from './TodoForm.module.css';
 
-export default function TodoForm({ addTodo }) {
+export default function TodoForm({ todos, addTodo }) {
   const [text, setText] = useState('');
 
   const onSubmitHandler = ev => {
     ev.preventDefault();
+    if (!text) return;
     addTodo(text);
     setText('');
   };
