@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './TodoForm.module.css';
 
-export default function TodoForm({ todos, addTodo }) {
+export default function TodoForm({ addTodo }) {
   const [text, setText] = useState('');
 
   const onSubmitHandler = ev => {

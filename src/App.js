@@ -13,18 +13,33 @@ function App() {
       isCompleted: false,
       id: uuidv4(),
     };
-    console.log(newTodo);
     setTodos([...todos, newTodo]);
+    console.log(todos);
   };
 
   const deleteTodoHandler = function (id) {
     setTodos(todos.filter(value => value.id !== id));
   };
+
+  const toggleTodoHandler = function (id) {
+    setTodos(
+      todos.map(value =>
+        value.id === id
+          ? { ...value, isCompleted: !value.isCompleted }
+          : { ...value }
+      )
+    );
+  };
+
   return (
     <div className="App">
       <h1 className="">Todo App</h1>
       <TodoForm todos={todos} addTodo={addTodoHandler} />
-      <TodoList deleteTodo={deleteTodoHandler} todos={todos} />
+      <TodoList
+        deleteTodo={deleteTodoHandler}
+        todos={todos}
+        toggleTodo={toggleTodoHandler}
+      />
     </div>
   );
 }
