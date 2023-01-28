@@ -1,9 +1,15 @@
 .textTodo {
-  margin: 10px auto;
-  border: 2px solid grey;
-  border-radius: 5px;
-  background-color: white;
-  max-width: 55%;
+  width: 100%;
   text-align: left;
-  padding: 5px 15px;
+}
+.todo {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 15px 0;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: 2px solid #555;
+  color: #132a41;
+  background-color: #fbfef9;
 }
