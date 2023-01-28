@@ -11,7 +11,7 @@ body {
   font-family: 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
   background-color: #132a41;
 }
-.textHeader {
+h1 {
   font-size: 2.2rem;
   margin-bottom: 40px;
   margin-top: 15px;
