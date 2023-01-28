@@ -1,6 +1,7 @@
 .textTodo {
   width: 100%;
   text-align: left;
+  font-family: 'Roboto', sans-serif;
 }
 .todo {
   display: flex;
@@ -12,4 +13,10 @@
   border: 2px solid #555;
   color: #132a41;
   background-color: #fbfef9;
+}
+.todoIcon {
+  font-size: 1.8rem;
+  margin-right: 10px;
+  color: teal;
+  margin-top: 7px;
 }
